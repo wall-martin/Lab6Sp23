@@ -11,12 +11,12 @@ def print_menu():
 
 def encode(str):
     encoded_password = ""
-    for i in range(len(str)):
-        new_value = int(str[i])
-        if new_value > 9:
-            new_value -= 10
-        encoded_password += str(new_value)
-    return str(list)
+    for value in str:
+        value = int(value) + 3
+        if value > 9:
+            value -= 10
+        encoded_password = encoded_password + f"{value}"
+    return encoded_password
 
 
 def decode(str):
@@ -30,7 +30,6 @@ def main():
 
         if option == "1":
             string = encode(input("Please enter your passcode to encode: "))
-            print(string)
             print("Your password has been encoded and stored!")
 
         elif option == "2":
