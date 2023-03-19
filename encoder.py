@@ -20,7 +20,15 @@ def encode(str):
 
 
 def decode(str):
-    pass
+    encoded_password = ''
+
+    for value in str(str):
+        value = int(value) - 3
+        if value < 0:
+            value += 10
+        encoded_password = encoded_password + str(value)
+
+    return encoded_password
 
 
 def main():
